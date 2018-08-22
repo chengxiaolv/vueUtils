@@ -1,7 +1,5 @@
 # chengxiaolv
 
-> 打印全页数据
-
 ## Build Setup
 
 ``` bash
@@ -27,4 +25,8 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```
+# static 下面 reset.css  清除公共样式
+
+# utils.js 集合所有工具类
+```
