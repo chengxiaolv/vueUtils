@@ -28,5 +28,5 @@ npm test
 ```
 # static 下面 reset.css  清除公共样式
 
-# utils 集合所有工具类
+# utils.js 集合所有工具类
 ```
