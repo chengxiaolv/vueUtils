@@ -1,0 +1,3 @@
+1、文件名：     jieping
+        功能 :    将屏幕截成图片保存到本地。
+        技术：  vue  +  html2cancas

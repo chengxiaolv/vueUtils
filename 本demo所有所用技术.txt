@@ -1,0 +1,6 @@
+vue2.0 
+webpack
+scss
+element-ui   （在使用的时候一定  Vue.use(ElementUI)  ）
+jquery   （ "jquery":"^2.2.3"）
+html2canvas
