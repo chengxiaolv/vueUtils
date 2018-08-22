@@ -21,6 +21,11 @@
             name:"测试",
             show: false,
 						router: '/ceshi'
+          },
+          {
+            name:"vuex",
+            show: false,
+						router: '/vuex'
           }
         ]
       }
@@ -29,11 +34,23 @@
       liChoose (item,index) {
 				this.lis.forEach((item) => {
 					item.show = false
-				})
+				});
 				item.show = true
-				this.$router.push(item.router)
+        this.$router.push(item.router);
+        sessionStorage.setItem("activeIndex",index);  //记录当刷新的时候，记录当前侧边栏点击状态。
 			},
-    }
+    },
+    created(){
+      var activeIndex = sessionStorage.getItem("activeIndex");   //记录当刷新的时候，得到当前侧边栏点击状态。
+			if(!activeIndex){
+				this.lis[0].show = true;
+				return;
+			}
+			this.lis.forEach((item) => {
+					item.show = false
+			})
+			this.lis[activeIndex].show = true;
+		},
   }
 </script>
 <style scoped lang="scss">
@@ -51,6 +68,7 @@
     line-height: 40px;
     font-size: 17px;
     &:hover{
+      cursor: pointer;
       background-color: #2F6B88;
     }
   }
