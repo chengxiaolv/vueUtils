@@ -1,7 +1,5 @@
 # chengxiaolv
 
-> 打印全页数据
-
 ## Build Setup
 
 ``` bash
