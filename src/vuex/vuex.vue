@@ -1,12 +1,14 @@
 <template>
-  <div>  
+  <div class="vuexContent">  
     <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
       <el-tab-pane label="用户管理" name="first"></el-tab-pane>
       <el-tab-pane label="配置管理" name="second"></el-tab-pane>
       <el-tab-pane label="角色管理" name="third"></el-tab-pane>
       <el-tab-pane label="定时任务补偿" name="fourth"></el-tab-pane>
     </el-tabs>
-    <router-view/>
+    <div class="content">
+      <router-view/>
+    </div>
   </div>
 </template>
 <script>
@@ -35,6 +37,15 @@
   }
 </script>
 <style scoped lang="scss">
-
+  .vuexContent{
+    height:100%;
+  }
+  .el-tabs{
+    height:60px;
+  }
+  .content{
+    height: calc(100% - 60px);
+    width: 100%;
+  }
 </style>
 

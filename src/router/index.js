@@ -21,7 +21,7 @@ Vue.use(Router)
 export default new Router({
     routes: [{
         path: '/',
-        name: 'main',
+        // name: 'main',
         component: main,
         children: [{
             path: '/',
@@ -33,7 +33,7 @@ export default new Router({
             component: ceshi
         }, {
             path: '/vuex',
-            name: 'vuex',
+            // name: 'vuex',
             component: vuex,
             children: [{
                 path: '/',

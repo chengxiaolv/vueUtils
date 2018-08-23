@@ -1,17 +1,22 @@
 <template>
   <div>
-    测试4
+    <el-input-number v-model="num1" @change="handleChange" :min="0" :max="100" label="描述文字"></el-input-number>
   </div>
 </template>
 <script>
   export default{
     data(){
       return {
-
+        num1: 0
+      }
+    },
+    methods:{
+      handleChange(value) {
+        console.log(value)
       }
     }
   }
 </script>
-<script scoped lang="scss">
+<style scoped lang="scss">
   
-</script>
+</style>

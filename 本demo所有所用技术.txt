@@ -4,4 +4,5 @@ scss
 element-ui   （在使用的时候一定  Vue.use(ElementUI)  ）
 jquery   （ "jquery":"^2.2.3"）
 html2canvas
-xx
+
+vuex   es6-promise（Vuex 依赖 Promise。如果你支持的浏览器并没有实现 Promise (比如 IE)，那么你可以使用一个 polyfill 的库，例如 es6-promise。  npm install es6-promise --save）
