@@ -26,5 +26,7 @@ npm test
 
 # utils.js 集合所有工具类
 
+# jieping截屏长图
+
 # vuex 下面集合所有vuex功能
 ```
