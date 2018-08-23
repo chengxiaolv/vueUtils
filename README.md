@@ -24,9 +24,13 @@ npm test
 ```
 # static 下面 reset.css  清除公共样式
 
-# utils.js 集合所有工具类
-
-# jieping截屏长图
+# utils文件下面:
+    utils.js 集合所有工具类
+    filters  全局过滤器
+    Reg.js   正则规则收集
 
 # vuex 下面集合所有vuex功能
+
+# components 文件夹下面：
+    jieping.vue截屏长图
 ```
