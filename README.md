@@ -25,4 +25,8 @@ npm test
 # static 下面 reset.css  清除公共样式
 
 # utils.js 集合所有工具类
+
+# jieping截屏长图
+
+# vuex 下面集合所有vuex功能
 ```
