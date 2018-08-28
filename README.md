@@ -28,6 +28,7 @@ npm test
     utils.js 集合所有工具类
     filters  全局过滤器
     Reg.js   正则规则收集
+    rem.js   rem设置适配的问题
 
 # vuex 下面集合所有vuex功能
 
