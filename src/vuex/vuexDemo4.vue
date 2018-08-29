@@ -16,8 +16,7 @@
       }
     },
     created(){
-      var val = this.$store.getters.bookList;
-      console.log(val)
+      var val = this.$store.getters.bookList;      
     }
   }
 </script>

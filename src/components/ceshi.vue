@@ -1,17 +1,21 @@
 <template>
-  <div>
+  <div class="content">
     测试
   </div>
 </template>
 <script>
-  export default{
+  export default {
     data(){
       return {
 
       }
+    },
+    methods:{
+      
     }
   }
 </script>
-<script scoped lang="scss">
-  
-</script>
+<style scoped lang="scss">
+
+</style>
+

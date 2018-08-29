@@ -17,7 +17,6 @@
     },
     created(){
       var val = this.$store.getters.bookList;
-      console.log(val)
     }
   }
 </script>
