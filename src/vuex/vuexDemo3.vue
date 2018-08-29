@@ -12,8 +12,12 @@
     },
     methods:{
       handleChange(value) {
-        console.log(value)
+        this.$store.dispatch("add_book",value);
       }
+    },
+    created(){
+      var val = this.$store.getters.bookList;
+      console.log(val)
     }
   }
 </script>

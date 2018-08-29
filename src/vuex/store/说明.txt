@@ -1,0 +1,166 @@
+参考地址： https://blog.csdn.net/wang839305939/article/details/73398585
+
+
+vuex之store拆分即多模块状态管理(modules)篇
+2017年06月18日 00:27:39 阅读数：4325 标签： vuex子模块管理 mutations 状态管理 单项数据流 更多
+个人分类： vue
+了解vuex的朋友都知道它是vue用来集中管理状态的容器，如果了解过Reduce的朋友可能看见他时就会非常熟悉，都是用来管理全局的状态的，实现不同组件之间相互的数据访问。这里我们不介绍vuex,主要介绍vuex拆分store以及多模块管理。我们知道如果一个项目非常大的话状态就会非常的多，如果不进行分类处理，所有的状态都维护在一个state里面的话，状态管理就会变得非常的混乱，这样非常不利于项目的后期维护。我们现在前端推崇模块化开发，为的就是提高开发效率和维护效率，避免重复工作。那么vuex是怎么样解决这个问题的呢？这个时候我们今天要讲的主角modules就要闪亮登场了。 
+其实这个用起来是非常简单的，正常情况下，我们在用vuex的时候我们是这样定义的：
+
+states.js //保存应用的状态值
+
+export default {
+   bookList:["西游记","水浒传","红楼梦","三国演义"]
+}
+
+mutations.js //在这个文件中定义对状态值的操作，增删改查。
+
+export default {//这里要注意不要在mutations里面进行异步操作
+   ADD_BOOK(state,book){
+       state.bookList.push(book);
+       return true;
+   },
+   DELETE_BOOK(state,id){
+   }
+}
+
+getters.js //将我们在states中定义的值暴露在store.getters对象中，便于我们在组件中可以通过store.getters.bookList访问数据
+
+export default {
+    bookList:function(state){
+        return state.bookList;
+    }
+} 
+
+actions.js //其实这里定义的方法只是将mutation.js中定义的方法进行了一次封装,就是去触发mutations.js中的方法。如果传如的参数需要异步获取的话，我们可以在这里等待异步返回成功后在触发mutations中的方法。在组件中这两个文件定义的方法都可以直接调用，mutations中定义的方法是通过store.dispath(′ADDBOOK′,book)调用的，而actons定义的方法是通过store.commit(‘ADD_BOOK’,book),调用的。
+
+export default {//在action中可以进行异步操作。
+   add_book({commit},book){
+      commit('ADD_BOOK',book);
+   },
+   delete_book({commit},book){
+     commit('DELETE_BOOK',id);
+   }
+}
+
+这里有时我们还可能会看见一个文件叫mutations_type.js其实这个文件定义的是mutations中的方法名,我自己在用的时候反正没定义这个文件，自己看着办如果喜欢你就定义上。
+
+上面定义的文件定义好了之后，我们就可以将我们定义的这些对象加入到vuex的Store中去了 
+store.js
+
+import vue from 'vue'
+import vuex from 'vuex'
+import states from './state.js'
+import mutatons from './mutations.js'
+import actons from './actions.js'
+import getters from './getters'
+vue.use(vuex);
+export default new vuex.Store({
+                    ststes,
+                    mutatons,
+                    getters,
+                    actions
+                  });             
+
+这样我们就写完整了一个store了。我们可以看出这里我们只有一个总模块，那如果我们要将总模块拆分成几个小模块，那应该怎样定义呢？
+
+import vue from 'vue'
+import vuex from 'vuex'
+import states from './state.js'
+import mutatons from './mutations.js'
+import actons from './actions.js'
+import getters from './getters'
+vue.use(vuex);
+export default new vuex.Store({
+                                modules:{
+                                         mod1:{
+                                               states,
+                                               mutatons,
+                                               getters,
+                                               actions
+                                               },
+                                          mod2:{}
+                                    }
+                  });  
+
+import vue from 'vue'
+import vuex from 'vuex'
+import states from './state.js'
+import mutatons from './mutations.js'
+import actons from './actions.js'
+import getters from './getters'
+vue.use(vuex);
+export default new vuex.Store({
+                               modules:{
+                                        mod1:{states,
+                                              mutatons,
+                                              getters,
+                                              actions
+                                            },
+                                        mod2:{}
+                                    }
+                  });  
+
+我自己在做项目的时候我一般将一个子模块的state，mutations，actions，getter写在一个文件中如: 
+mod1.js
+
+ export default {
+    state:{},
+    mutatons:{},
+    actions:{},
+    getters:{}
+}
+
+mod2.js
+
+ export default {
+    state:{},
+    mutatons:{},
+    actions:{},
+    getters:{}
+}
+
+然后在将几个mod合并到store中去：
+
+import vue from 'vue'
+import vuex from 'vuex'
+import mod1 from './mod1.js'
+import mod2 from './mod2.js'
+vue.use(vuex);
+export default new vuex.Store({
+                                       modules:{
+                                                   mod1:mod1,
+                                                   mod2:mod1
+                                    }
+                  });
+
+我感觉这样写的话代码结构更加直观，清晰。而且正常的话一个子模块一般不会有太多的状态和方法。当然如果项目中子模块的状态和方法确实太多，我们还是推荐将state,actions,getters,mutations单独写在不同的文件中，然后将不同的子模块的这些文件放在一个文件夹中，这样就代表一个子状态管理模块。 
+通过将总的store拆分过后，我们在状态管理和维护的时候就更加清晰了。
+
+在创建出store后，我们需要将store挂载到vue上去
+
+import vue from 'vue'
+import store from './store'
+var vue = new Vue({
+  store,
+  ···· 
+}).$mount("#app")
+之后在组建中就可以使用和管理前面定义的状态了，
+
+<template>
+</template>
+<script>
+    export default{
+             computed{
+                           bookList:this.$store.mod1.bookList,
+             },
+             methods:{
+                         addBook:book=>this.$store.mod1.commit('ADD_BOOK',book);//这里需要注意，如果你是用了子模块的这                               种方法你需要加上模块名这是mod1，如果没有就不需要加。
+                         deleteBook:id=>this.$store.mod1.disaptch('DELETE_BOOK',id);
+       }        
+    }
+</script>
+总结： 
+将store进行拆分，有利于我们更好的管理项目中的状态，以及使我们的项目维护更加加单高效。各个模块之间的开发互相不影响。 
+好了，这次就简单的介绍到这里，这次主要是介绍怎么用。并没有深入到他的实现原理，对于vue的涉世未深的人来说，我感觉还是够用了。 
+在最后我也申明一下，由于我习惯了写通假字，所以请忽略文中的…你懂的！
