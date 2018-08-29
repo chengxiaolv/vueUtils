@@ -32,6 +32,8 @@ npm test
 
 # vuex 下面集合所有vuex功能  完成用 localStorage 来保存vuex刷新页面丢失vuex保存问题
 
+# es6 文件夹下面集合所有es6的所有新语法。
+
 # components 文件夹下面：
     jieping.vue截屏长图
 ```
