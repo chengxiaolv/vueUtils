@@ -30,7 +30,7 @@ npm test
     Reg.js   正则规则收集
     rem.js   rem设置适配的问题
 
-# vuex 下面集合所有vuex功能
+# vuex 下面集合所有vuex功能  完成用 localStorage 来保存vuex刷新页面丢失vuex保存问题
 
 # components 文件夹下面：
     jieping.vue截屏长图
