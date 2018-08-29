@@ -13,6 +13,14 @@ import vuexDemo2 from '@/vuex/vuexDemo2'
 import vuexDemo3 from '@/vuex/vuexDemo3'
 import vuexDemo4 from '@/vuex/vuexDemo4'
 
+/**
+ * 测试es6的使用
+ */
+import es6 from '@/es6/es6'
+import es6_1 from '@/es6/es6_1'
+import es6_2 from '@/es6/es6_2'
+import es6_3 from '@/es6/es6_3'
+import es6_4 from '@/es6/es6_4'
 
 
 
@@ -51,6 +59,27 @@ export default new Router({
                 path: '/vuexDemo4',
                 name: 'vuexDemo4',
                 component: vuexDemo4
+            }, ]
+        }, {
+            path: '/es6',
+            name: 'es6',
+            component: es6,
+            children: [{
+                path: '/',
+                name: 'es6_1',
+                component: es6_1
+            }, {
+                path: '/es6_2',
+                name: 'es6_2',
+                component: es6_2
+            }, {
+                path: '/es6_3',
+                name: 'es6_3',
+                component: es6_3
+            }, {
+                path: '/es6_4',
+                name: 'es6_4',
+                component: es6_4
             }, ]
         }]
     }]

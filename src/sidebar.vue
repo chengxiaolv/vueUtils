@@ -26,6 +26,11 @@
             name:"vuex",
             show: false,
 						router: '/vuex'
+          },
+          {
+            name:"es6",
+            show: false,
+						router: '/es6'
           }
         ]
       }
