@@ -71,7 +71,26 @@ var util = {
     timeRange(beginTime, endTime, nowTime) {
         var arr = beginTime.split(":");
         var arr2 = endTime.split(":");
+        var arr3 = nowTime.split(":");
         var flag = (arr[0] * 3600 + arr[1] * 60) - (arr2[0] * 3600 + arr2[1] * 60);
+        var flag2 = (arr2[0] * 3600 + arr2[1] * 60) - (arr3[0] * 3600 + arr3[1] * 60);
+        var flag3 = (arr3[0] * 3600 + arr3[1] * 60) - (arr[0] * 3600 + arr[1] * 60);
+
+        if (flag == 0) {
+            console.log('请给与正确的时间范围')
+            return false;
+        }
+
+        if (flag2 == 0) {
+            console.log("不在在时间范围")
+            return false;
+        }
+
+        if (flag == 0) {
+            console.log("不在在时间范围")
+            return false;
+        }
+
         if (flag < 0) {
             var strb = beginTime.split(":");
             if (strb.length != 2) {
@@ -106,10 +125,10 @@ var util = {
                 return false;
             }
         } else if (flag > 0) {
-            var arr3 = endTime.split(":");
-            var arr4 = nowTime.split(":");
-            var flag2 = (arr3[0] * 3600 + arr3[1] * 60) - (arr4[0] * 3600 + arr4[1] * 60);
-            if (flag2 > 0) {
+            if (flag3 > 0) {
+                console.log("在时间范围")
+                return true;
+            } else if (flag2 > 0) {
                 console.log("在时间范围")
                 return true;
             } else {
