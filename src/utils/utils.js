@@ -67,6 +67,8 @@ var util = {
      * @param {*} nowTime    判断是否在范围段的时间
      *  
      *     var time = "09:09";  var beginTime = "20:00";  var endTime = "22:00";
+     * 
+     *      当判断的时间等于范围时间  也是属于范围内
      */
     timeRange(beginTime, endTime, nowTime) {
         var arr = beginTime.split(":");
@@ -82,13 +84,13 @@ var util = {
         }
 
         if (flag2 == 0) {
-            console.log("不在在时间范围")
-            return false;
+            console.log("在时间范围")
+            return true;
         }
 
-        if (flag == 0) {
-            console.log("不在在时间范围")
-            return false;
+        if (flag3 == 0) {
+            console.log("在时间范围")
+            return true;
         }
 
         if (flag < 0) {
