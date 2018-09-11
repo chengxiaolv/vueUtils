@@ -2,6 +2,7 @@
 // 设置cookie    setCookie(c_name, value, expiredays)
 // 删除cookie    delCookie(name)
 // 获得当前年月格式时间(yyyy-mm / yyyy-mm-dd)    getNowTime()
+// 比较是否在时、分的范围段内    timeRange(beginTime, endTime, nowTime) 
 
 
 var util = {
@@ -58,6 +59,64 @@ var util = {
         // var currentdate = year + seperator1 + month + seperator1 + strDate; // yyyy-mm-dd
         var currentdate = year + seperator1 + month; // yyyy-mm
         return currentdate;
+    },
+    /**
+     * 
+     * @param {*} beginTime  范围的开始时间
+     * @param {*} endTime    范围的结束时间
+     * @param {*} nowTime    判断是否在范围段的时间
+     *  
+     *     var time = "09:09";  var beginTime = "20:00";  var endTime = "22:00";
+     */
+    timeRange(beginTime, endTime, nowTime) {
+        var arr = beginTime.split(":");
+        var arr2 = endTime.split(":");
+        var flag = (arr[0] * 3600 + arr[1] * 60) - (arr2[0] * 3600 + arr2[1] * 60);
+        if (flag < 0) {
+            var strb = beginTime.split(":");
+            if (strb.length != 2) {
+                return false;
+            }
+
+            var stre = endTime.split(":");
+            if (stre.length != 2) {
+                return false;
+            }
+
+            var strn = nowTime.split(":");
+            if (stre.length != 2) {
+                return false;
+            }
+            var b = new Date();
+            var e = new Date();
+            var n = new Date();
+
+            b.setHours(strb[0]);
+            b.setMinutes(strb[1]);
+            e.setHours(stre[0]);
+            e.setMinutes(stre[1]);
+            n.setHours(strn[0]);
+            n.setMinutes(strn[1]);
+
+            if (n.getTime() - b.getTime() > 0 && n.getTime() - e.getTime() < 0) {
+                console.log("在时间范围")
+                return true;
+            } else {
+                console.log("不在在时间范围")
+                return false;
+            }
+        } else if (flag > 0) {
+            var arr3 = endTime.split(":");
+            var arr4 = nowTime.split(":");
+            var flag2 = (arr3[0] * 3600 + arr3[1] * 60) - (arr4[0] * 3600 + arr4[1] * 60);
+            if (flag2 > 0) {
+                console.log("在时间范围")
+                return true;
+            } else {
+                console.log("不在在时间范围")
+                return false;
+            }
+        }
     }
 }
 
