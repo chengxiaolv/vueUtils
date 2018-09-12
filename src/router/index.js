@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import jieping from '@/components/jieping' //长途截屏
-import ceshi from '@/components/ceshi'
 import main from '../main.vue'
+
+import jieping from '@/components/jieping' //长途截屏
+import ceshi from '@/components/ceshi' //测试
+import dayin from '@/components/dayin' //测试
 
 /**
  * 测试vuex的使用
@@ -81,6 +83,10 @@ export default new Router({
                 name: 'es6_4',
                 component: es6_4
             }, ]
-        }]
+        }, {
+            path: '/dayin',
+            name: 'dayin',
+            component: dayin
+        }, ]
     }]
 })

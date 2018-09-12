@@ -31,6 +31,11 @@
             name:"es6",
             show: false,
 						router: '/es6'
+          },
+          {
+            name:"打印",
+            show: false,
+						router: '/dayin'
           }
         ]
       }
