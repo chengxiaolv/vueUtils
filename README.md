@@ -36,4 +36,5 @@ npm test
 
 # components 文件夹下面：
     jieping.vue截屏长图
+    dayin.vue 打印功能和转pdf格式功能1
 ```
