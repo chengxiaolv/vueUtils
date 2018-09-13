@@ -10,6 +10,12 @@ import $ from 'jquery'
 import 'es6-promise/auto' //因为ie不支持promise
 import store from "./vuex/store/store.js" //引入vuex的集中块。
 
+// 引入图片预览功能。
+import 'viewerjs/dist/viewer.css'
+import Viewer from 'v-viewer'
+Vue.use(Viewer)
+
+
 import * as filters from './utils/filters' //其中import * as filters from ‘./filters/filter.js’是导入filter.js文件中的所有过滤器
 Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key]);

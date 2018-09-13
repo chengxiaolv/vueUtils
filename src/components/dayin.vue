@@ -1,3 +1,6 @@
+// 不用下载软盒插件，以下方面就可以直接使用
+
+
 <template>
   <div>
     <div id="form_print">

@@ -36,6 +36,11 @@
             name:"打印",
             show: false,
 						router: '/dayin'
+          },
+          {
+            name:"图片预览",
+            show: false,
+						router: '/tupianyulan'
           }
         ]
       }
