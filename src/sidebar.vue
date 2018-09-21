@@ -18,9 +18,9 @@
 						router: '/'
           },
            {
-            name:"测试",
+            name:"百度地图",
             show: false,
-						router: '/ceshi'
+						router: '/baiduditu'
           },
           {
             name:"vuex",

@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import main from '../main.vue'
 
 import jieping from '@/components/jieping' //长途截屏
-import ceshi from '@/components/ceshi' //测试
+import baiduditu from '@/components/baiduditu' //测试
 import dayin from '@/components/dayin' //打印
 import tupianyulan from '@/components/tupianyulan' //预览图片
 import axios from '@/axios/axios.vue' //预览图片
@@ -40,9 +40,9 @@ export default new Router({
             name: 'jieping',
             component: jieping
         }, {
-            path: '/ceshi',
-            name: 'ceshi',
-            component: ceshi
+            path: '/baiduditu',
+            name: 'baiduditu',
+            component: baiduditu
         }, {
             path: '/vuex',
             // name: 'vuex',
