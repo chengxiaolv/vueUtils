@@ -37,7 +37,7 @@
 
 
     <viewer @inited="inited" ref="viewer">
-      <template scope="scope">
+      <template slot-scope="scope">
         <!-- <img :src="previewUrl" style="display: none;"> -->
         <img src="../../static/images/1.jpg" style="display: none;">
       </template>

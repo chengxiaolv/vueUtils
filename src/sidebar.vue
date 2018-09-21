@@ -41,6 +41,11 @@
             name:"图片预览",
             show: false,
 						router: '/tupianyulan'
+          },
+          {
+            name:"封装axios",
+            show: false,
+						router: '/axios'
           }
         ]
       }

@@ -10,6 +10,9 @@ import $ from 'jquery'
 import 'es6-promise/auto' //因为ie不支持promise
 import store from "./vuex/store/store.js" //引入vuex的集中块。
 
+import https from "./axios/axios.js"; //引入封装的axios  
+Vue.prototype.https = https; //引入到原型上。
+
 // 引入图片预览功能。
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'

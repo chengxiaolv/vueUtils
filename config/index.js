@@ -10,7 +10,14 @@ module.exports = {
         // Paths
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {},
+        proxyTable: {
+            "/service": {
+                target: "http://hospital.tzucpa.cn",
+                // target: "http://172.16.2.218/",
+                changeOrigin: true,
+                secure: false
+            }
+        },
 
         // Various Dev Server settings
         host: 'localhost', // can be overwritten by process.env.HOST

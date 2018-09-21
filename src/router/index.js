@@ -6,6 +6,7 @@ import jieping from '@/components/jieping' //长途截屏
 import ceshi from '@/components/ceshi' //测试
 import dayin from '@/components/dayin' //打印
 import tupianyulan from '@/components/tupianyulan' //预览图片
+import axios from '@/axios/axios.vue' //预览图片
 
 /**
  * 测试vuex的使用
@@ -92,6 +93,10 @@ export default new Router({
             path: '/tupianyulan',
             name: 'tupianyulan',
             component: tupianyulan
-        }, ]
+        }, {
+            path: '/axios',
+            name: 'axios',
+            component: axios
+        }]
     }]
 })
