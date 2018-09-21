@@ -38,4 +38,6 @@ npm test
     jieping.vue截屏长图
     dayin.vue 打印功能和转pdf格式功能1
     tupianyulan.vue 图片预览功能
+    
+ # axios 文件夹下面封装了axios。和封装的axios的简单使用。
 ```
