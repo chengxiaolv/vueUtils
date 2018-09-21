@@ -42,25 +42,25 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 // vuex的路径根据自己的路径去写
 // import store from '@/store/index';
 // 请求拦截器
-axios.interceptors.request.use(
-    config => {
-        //  打开loadding
-        // store.commit('CONTROL_LOADDING', true)
-        // if (store.getters.token) {
-        //     config.headers['X-Token'] = getToken() // 让每个请求携带token--['X-Token']为自定义key 请根据实际情况自行修改
-        // }
+// axios.interceptors.request.use(
+//     config => {
+//         //  打开loadding
+//         // store.commit('CONTROL_LOADDING', true)
+//         // if (store.getters.token) {
+//         //     config.headers['X-Token'] = getToken() // 让每个请求携带token--['X-Token']为自定义key 请根据实际情况自行修改
+//         // }
 
-        // 每次发送请求之前判断vuex中是否存在token
-        // 如果存在，则统一在http请求的header都加上token，这样后台根据token判断你的登录情况
-        // 即使本地存在token，也有可能token是过期的，所以在响应拦截器中要对返回状态进行判断
-        const token = store.state.token;
-        token && (config.headers.Authorization = token);
-        return config;
-    },
-    error => {
-        return Promise.error(error);
-    }
-);
+//         // 每次发送请求之前判断vuex中是否存在token
+//         // 如果存在，则统一在http请求的header都加上token，这样后台根据token判断你的登录情况
+//         // 即使本地存在token，也有可能token是过期的，所以在响应拦截器中要对返回状态进行判断
+//         const token = store.state.token;
+//         token && (config.headers.Authorization = token);
+//         return config;
+//     },
+//     error => {
+//         return Promise.error(error);
+//     }
+// );
 // 这里说一下token，一般是在登录完成之后，将用户的token通过localStorage或者cookie存在本地，然后用户每次在进入页面的时候（即在main.js中），会首先从本地存储中读取token，如果token存在说明用户已经登陆过，则更新vuex中的token状态。然后，在每次请求接口的时候，都会在请求的header中携带token，后台人员就可以根据你携带的token来判断你的登录是否过期，如果没有携带，则说明没有登录过。这时候或许有些小伙伴会有疑问了，就是每个请求都携带token，那么要是一个页面不需要用户登录就可以访问的怎么办呢？其实，你前端的请求可以携带token，但是后台可以选择不接收啊！
 
 
