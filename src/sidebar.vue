@@ -46,6 +46,11 @@
             name:"封装axios",
             show: false,
 						router: '/axios'
+          },
+          {
+            name:"富文本编辑器",
+            show: false,
+						router: '/fuwenben'
           }
         ]
       }

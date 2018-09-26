@@ -6,7 +6,8 @@ import jieping from '@/components/jieping' //长途截屏
 import baiduditu from '@/components/baiduditu' //测试
 import dayin from '@/components/dayin' //打印
 import tupianyulan from '@/components/tupianyulan' //预览图片
-import axios from '@/axios/axios.vue' //预览图片
+import fuwenben from '@/components/fuwenben' //富文本
+import axios from '@/axios/axios.vue' //封装axios和使用
 
 /**
  * 测试vuex的使用
@@ -97,6 +98,10 @@ export default new Router({
             path: '/axios',
             name: 'axios',
             component: axios
+        }, {
+            path: '/fuwenben',
+            name: 'fuwenben',
+            component: fuwenben
         }]
     }]
 })
