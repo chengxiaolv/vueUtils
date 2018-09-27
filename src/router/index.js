@@ -8,6 +8,7 @@ import dayin from '@/components/dayin' //打印
 import tupianyulan from '@/components/tupianyulan' //预览图片
 import fuwenben from '@/components/fuwenben' //富文本
 import axios from '@/axios/axios.vue' //封装axios和使用
+import mock from '@/mockjs/mock.vue' //封装axios和使用
 
 /**
  * 测试vuex的使用
@@ -102,6 +103,10 @@ export default new Router({
             path: '/fuwenben',
             name: 'fuwenben',
             component: fuwenben
+        }, {
+            path: '/mock',
+            name: 'mock',
+            component: mock
         }]
     }]
 })

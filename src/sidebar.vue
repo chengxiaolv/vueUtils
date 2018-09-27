@@ -51,6 +51,11 @@
             name:"富文本编辑器",
             show: false,
 						router: '/fuwenben'
+          },
+          {
+            name:"mockjs模拟请求",
+            show: false,
+						router: '/mock'
           }
         ]
       }
