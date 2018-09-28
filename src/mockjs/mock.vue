@@ -1,9 +1,9 @@
 <template>
   <div class="mock">
-    <el-button @click="activeIndex=1">简单mock</el-button>
-    <el-button @click="activeIndex=2">默认按钮</el-button>
-    <el-button @click="activeIndex=3">默认按钮</el-button>
-    <el-button @click="activeIndex=4">默认按钮</el-button>
+    <el-button @click="activeIndex=1" :class="{isChecked:activeIndex==1?true:false}">简单mock</el-button>
+    <el-button @click="activeIndex=2" :class="{isChecked:activeIndex==2?true:false}">数据模板定义</el-button>
+    <el-button @click="activeIndex=3" :class="{isChecked:activeIndex==3?true:false}">数据占位符定义</el-button>
+    <el-button @click="activeIndex=4" :class="{isChecked:activeIndex==4?true:false}">默认按钮</el-button>
 
     <div class="content">
       <mock1 v-if="activeIndex==1"></mock1>
@@ -42,6 +42,11 @@
     background-color: #f2f2f2;
     padding:10px;
     overflow-y: auto;
+  }
+  .isChecked{
+    color: #409EFF;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
   }
 </style>
 
