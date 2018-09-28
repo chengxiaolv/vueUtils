@@ -34,6 +34,8 @@ npm test
 
 # es6 文件夹下面集合所有es6的所有新语法。
 
+# mockjs 文件夹   是所有mock虚拟请求得方法。
+
 # components 文件夹下面：
     jieping.vue截屏长图
     dayin.vue 打印功能和转pdf格式功能1
