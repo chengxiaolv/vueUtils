@@ -56,6 +56,11 @@
             name:"mockjs模拟请求",
             show: false,
 						router: '/mock'
+          },
+          {
+            name:"有彩打印",
+            show: false,
+						router: '/youcaidayin'
           }
         ]
       }
