@@ -61,6 +61,11 @@
             name:"有彩打印",
             show: false,
 						router: '/youcaidayin'
+          },
+          {
+            name:"下载本地文件",
+            show: false,
+						router: '/bendixiazai'
           }
         ]
       }

@@ -7,6 +7,7 @@ import baiduditu from '@/components/baiduditu' //测试
 import dayin from '@/components/dayin' //打印
 import tupianyulan from '@/components/tupianyulan' //预览图片
 import fuwenben from '@/components/fuwenben' //富文本
+import bendixiazai from '@/components/bendixiazai' //下载本地文件
 import axios from '@/axios/axios.vue' //封装axios和使用
 import mock from '@/mockjs/mock.vue' //封装axios和使用
 import youcaidayin from '@/components/youcaidayin.vue' //封装axios和使用
@@ -112,6 +113,10 @@ export default new Router({
             path: '/youcaidayin',
             name: 'youcaidayin',
             component: youcaidayin
+        }, {
+            path: '/bendixiazai',
+            name: 'bendixiazai',
+            component: bendixiazai
         }, ]
     }]
 })

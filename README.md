@@ -43,6 +43,7 @@ npm test
     baiduditu.vue 百度地图的研究
     fuwenben.vue  wangeditor富文本的使用
     youcaidayin.vue  彩色打印。
-    
+    bendixiazai.vue  下载本地文件
+
  # axios 文件夹下面封装了axios。和封装的axios的简单使用。
 ```
