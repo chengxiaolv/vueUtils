@@ -12,10 +12,16 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             "/service": {
-                target: "http://hospital.tzucpa.cn",
-                // target: "http://172.16.2.218/",
+                // target: "http://hospital.tzucpa.cn",
+                target: "http://61.135.242.160:8090/api/v1",
+
                 changeOrigin: true,
-                secure: false
+                secure: false,
+
+                // pathRewrite: {
+                //反向代理的话， 如果是传参的形式。 一定加上下面这段代码
+                //     '^/service': ''
+                // }
             }
         },
 
