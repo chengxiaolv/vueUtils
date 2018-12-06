@@ -7,6 +7,7 @@ import ElementUI from 'element-ui';
 import Vuex from 'vuex'
 import 'element-ui/lib/theme-chalk/index.css';
 import $ from 'jquery'
+
 import 'es6-promise/auto' //因为ie不支持promise
 import store from "./vuex/store/store.js" //引入vuex的集中块。
 
@@ -20,6 +21,7 @@ Vue.use(Viewer)
 
 // 引入mockjs
 require('./mockjs/mock.js')
+require('./utils/xlsx.full.min.js')
 
 
 import * as filters from './utils/filters' //其中import * as filters from ‘./filters/filter.js’是导入filter.js文件中的所有过滤器

@@ -66,7 +66,11 @@
             name:"下载本地文件",
             show: false,
 						router: '/bendixiazai'
-          }
+          }, {
+            name:"将excel表格渲染",
+            show: false,
+						router: '/xlsx-to-json'
+          },
         ]
       }
     },
