@@ -21,7 +21,6 @@ Vue.use(Viewer)
 
 // 引入mockjs
 require('./mockjs/mock.js')
-require('./utils/xlsx.full.min.js')
 
 
 import * as filters from './utils/filters' //其中import * as filters from ‘./filters/filter.js’是导入filter.js文件中的所有过滤器

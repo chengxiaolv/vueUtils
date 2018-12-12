@@ -12,6 +12,7 @@ import axios from '@/axios/axios.vue' //封装axios和使用
 import mock from '@/mockjs/mock.vue' //封装axios和使用
 import youcaidayin from '@/components/youcaidayin.vue' //封装axios和使用
 import xlsxToJson from '@/components/xlsxToJson.vue' //将 xlsx xls 格式的 excel 转化为json数据表格渲染
+import tuozhuai from '@/components/tuozhuai.vue' //拖拽功能
 /**
  * 测试vuex的使用
  */
@@ -121,6 +122,10 @@ export default new Router({
             path: '/xlsx-to-json',
             name: 'xlsxToJson',
             component: xlsxToJson
+        }, {
+            path: '/tuozhuai',
+            name: 'tuozhuai',
+            component: tuozhuai
         }, ]
     }]
 })

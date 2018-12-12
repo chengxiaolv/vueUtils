@@ -70,6 +70,10 @@
             name:"将excel表格渲染",
             show: false,
 						router: '/xlsx-to-json'
+          },{
+            name:"拖拽功能",
+            show: false,
+						router: '/tuozhuai'
           },
         ]
       }
