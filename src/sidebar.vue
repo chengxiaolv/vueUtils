@@ -74,6 +74,10 @@
             name:"拖拽功能",
             show: false,
 						router: '/tuozhuai'
+          },{
+            name:"日期选择器",
+            show: false,
+						router: '/time'
           },
         ]
       }

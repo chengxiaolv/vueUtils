@@ -24,6 +24,8 @@ npm test
 ```
 # static 下面 reset.css  清除公共样式
 
+# SelectionDate 下面是一个有意思的日期选择器
+
 # utils文件下面:
     utils.js 集合所有工具类
     filters  全局过滤器
