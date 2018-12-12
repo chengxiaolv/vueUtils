@@ -10,27 +10,42 @@ export default {
   },
   methods: {
     login() {
-      this.https.post("/service", {
-        data: JSON.stringify({
-          command: "login",
-          platform: "web",
-          loginName: 1,
-          psd: 123456,
-          type: "managerSystem"
-        })
-      })
+      this.https.post("/news/index", {})
         .then(
           response =>  {
-            if(response.statusCode == '10001'){
-              console.log(response)
-            }else{
-              console.log(response)
-            }
+            this.$notify({
+              title: '成功',
+              message: '登陆成功',
+              type: 'success'
+            });
           }
         )
         .catch(response => {
           console.log(response)
         });
+
+      // 封装的完整案例
+      // this.https.post("/service", {
+      //   data: JSON.stringify({
+      //     command: "login",
+      //     platform: "web",
+      //     loginName: 1,
+      //     psd: 123456,
+      //     type: "managerSystem"
+      //   })
+      // })
+      //   .then(
+      //     response =>  {
+      //       if(response.statusCode == '10001'){
+      //         console.log(response)
+      //       }else{
+      //         console.log(response)
+      //       }
+      //     }
+      //   )
+      //   .catch(response => {
+      //     console.log(response)
+      //   });
     }
   }
 };
