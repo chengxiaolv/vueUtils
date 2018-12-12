@@ -9,29 +9,17 @@
     <a href="../../static/testDownLoad/234.txt" download>下载.txt文件</a>
     <!-- 下载图片文件时，必须在后面加上download -->
     <a href="../../static/testDownLoad/1.jpg" download>下载图片文件</a> 
-     
-   <!-- <input type="button" value="sdas" @click="downloadIamge()"> -->
+    
   </div>
 </template>
 
 <script>
   export default {
     data () {
-
-    },
-    components: {
-     
-    },
-    methods:{
-      downloadIamge(name){
-        // 将图片的src属性作为URL地址  
-        var url = '../../static/testDownLoad/1.jpg'
-        var a = document.createElement('a')  
-        var event = new MouseEvent('click')  
-        a.download = name || '下载图片名称'  
-        a.href = url  
-        a.dispatchEvent(event) 
+      return{
       }
+    },
+    methods: {
     }
   }
 </script>
