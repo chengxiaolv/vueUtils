@@ -63,7 +63,7 @@
               placeholder="请输入内容"
               prefix-icon="el-icon-search"
               size="small"
-              v-model="name">
+              v-model="name" @keyup.enter.native="login">
             </el-input>
           </el-col>
         </el-row>
@@ -76,7 +76,7 @@
               placeholder="请输入内容"
               prefix-icon="el-icon-search"
               size="small"
-              v-model="possword">
+              v-model="possword"  @keyup.enter.native="login">
             </el-input>
           </el-col>
         </el-row>
