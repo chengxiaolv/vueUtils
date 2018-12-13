@@ -15,6 +15,7 @@ import xlsxToJson from '@/components/xlsxToJson.vue' //将 xlsx xls 格式的 ex
 import tuozhuai from '@/components/tuozhuai.vue' //拖拽功能
 import time from '@/SelectionDate/time.vue' //  有意思的时间器
 import jianbiantexiao from '@/components/jianbiantexiao.vue' //  渐变特效
+import tupiancaijian from '@/components/tupiancaijian.vue' //  图片裁剪
 /**
  * 测试vuex的使用
  */
@@ -144,6 +145,10 @@ export default new Router({
                 path: '/jianbiantexiao',
                 name: 'jianbiantexiao',
                 component: jianbiantexiao
+            }, {
+                path: '/tupiancaijian',
+                name: 'tupiancaijian',
+                component: tupiancaijian
             }, ]
         }
     ]

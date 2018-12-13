@@ -48,6 +48,9 @@ npm test
     bendixiazai.vue  下载本地文件
     tuozhuai.vue  拖拽功能
     login.vue     做的漂亮登陆页
+    time        有意思的时间器
+    jianbiantexiao   渐变特效
+    tupiancaijian   图片裁剪
 
  # axios 文件夹下面封装了axios。和封装的axios的简单使用。
 ```

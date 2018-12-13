@@ -82,6 +82,10 @@
             name:"渐变特效",
             show: false,
 						router: '/jianbiantexiao'
+          },{
+            name:"图片裁剪",
+            show: false,
+						router: '/tupiancaijian'
           },
         ]
       }
