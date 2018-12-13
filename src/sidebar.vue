@@ -78,6 +78,10 @@
             name:"日期选择器",
             show: false,
 						router: '/time'
+          },{
+            name:"渐变特效",
+            show: false,
+						router: '/jianbiantexiao'
           },
         ]
       }

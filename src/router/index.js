@@ -14,6 +14,7 @@ import youcaidayin from '@/components/youcaidayin.vue' //封装axios和使用
 import xlsxToJson from '@/components/xlsxToJson.vue' //将 xlsx xls 格式的 excel 转化为json数据表格渲染
 import tuozhuai from '@/components/tuozhuai.vue' //拖拽功能
 import time from '@/SelectionDate/time.vue' //  有意思的时间器
+import jianbiantexiao from '@/components/jianbiantexiao.vue' //  渐变特效
 /**
  * 测试vuex的使用
  */
@@ -139,6 +140,10 @@ export default new Router({
                 path: '/time',
                 name: 'time',
                 component: time
+            }, {
+                path: '/jianbiantexiao',
+                name: 'jianbiantexiao',
+                component: jianbiantexiao
             }, ]
         }
     ]
