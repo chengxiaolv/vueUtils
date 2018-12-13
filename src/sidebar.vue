@@ -15,7 +15,7 @@
           {
             name:"html截屏图片",
             show: true,
-						router: '/'
+						router: '/main'
           },
            {
             name:"百度地图",

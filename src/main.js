@@ -22,6 +22,9 @@ Vue.use(Viewer)
 // 引入mockjs
 require('./mockjs/mock.js')
 
+import VueParticles from 'vue-particles' //引入背景粒子。
+Vue.use(VueParticles)
+
 
 import * as filters from './utils/filters' //其中import * as filters from ‘./filters/filter.js’是导入filter.js文件中的所有过滤器
 Object.keys(filters).forEach(key => {

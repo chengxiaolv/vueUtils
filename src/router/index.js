@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import main from '../main.vue'
-
+import login from '@/components/login'
+import main from '../main.vue' //登陆页
 import jieping from '@/components/jieping' //长途截屏
 import baiduditu from '@/components/baiduditu' //测试
 import dayin from '@/components/dayin' //打印
@@ -38,99 +38,108 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
-        path: '/',
-        // name: 'main',
-        component: main,
-        children: [{
             path: '/',
-            name: 'jieping',
-            component: jieping
-        }, {
-            path: '/baiduditu',
-            name: 'baiduditu',
-            component: baiduditu
-        }, {
-            path: '/vuex',
-            // name: 'vuex',
-            component: vuex,
+            name: 'login',
+            component: login,
+        },
+        {
+            path: '/main',
+            // name: 'main',
+            component: main,
             children: [{
                 path: '/',
-                name: 'vuexDemo1',
-                component: vuexDemo1
+                component: jieping
             }, {
-                path: '/vuexDemo2',
-                name: 'vuexDemo2',
-                component: vuexDemo2
+                path: 'jieping',
+                name: 'jieping',
+                component: jieping
             }, {
-                path: '/vuexDemo3',
-                name: 'vuexDemo3',
-                component: vuexDemo3
+                path: '/baiduditu',
+                name: 'baiduditu',
+                component: baiduditu
             }, {
-                path: '/vuexDemo4',
-                name: 'vuexDemo4',
-                component: vuexDemo4
+                path: '/vuex',
+                // name: 'vuex',
+                component: vuex,
+                children: [{
+                    path: '/',
+                    name: 'vuexDemo1',
+                    component: vuexDemo1
+                }, {
+                    path: '/vuexDemo2',
+                    name: 'vuexDemo2',
+                    component: vuexDemo2
+                }, {
+                    path: '/vuexDemo3',
+                    name: 'vuexDemo3',
+                    component: vuexDemo3
+                }, {
+                    path: '/vuexDemo4',
+                    name: 'vuexDemo4',
+                    component: vuexDemo4
+                }, ]
+            }, {
+                path: '/es6',
+                name: 'es6',
+                component: es6,
+                children: [{
+                    path: '/',
+                    name: 'es6_1',
+                    component: es6_1
+                }, {
+                    path: '/es6_2',
+                    name: 'es6_2',
+                    component: es6_2
+                }, {
+                    path: '/es6_3',
+                    name: 'es6_3',
+                    component: es6_3
+                }, {
+                    path: '/es6_4',
+                    name: 'es6_4',
+                    component: es6_4
+                }, ]
+            }, {
+                path: '/dayin',
+                name: 'dayin',
+                component: dayin
+            }, {
+                path: '/tupianyulan',
+                name: 'tupianyulan',
+                component: tupianyulan
+            }, {
+                path: '/axios',
+                name: 'axios',
+                component: axios
+            }, {
+                path: '/fuwenben',
+                name: 'fuwenben',
+                component: fuwenben
+            }, {
+                path: '/mock',
+                name: 'mock',
+                component: mock
+            }, {
+                path: '/youcaidayin',
+                name: 'youcaidayin',
+                component: youcaidayin
+            }, {
+                path: '/bendixiazai',
+                name: 'bendixiazai',
+                component: bendixiazai
+            }, {
+                path: '/xlsx-to-json',
+                name: 'xlsxToJson',
+                component: xlsxToJson
+            }, {
+                path: '/tuozhuai',
+                name: 'tuozhuai',
+                component: tuozhuai
+            }, {
+                path: '/time',
+                name: 'time',
+                component: time
             }, ]
-        }, {
-            path: '/es6',
-            name: 'es6',
-            component: es6,
-            children: [{
-                path: '/',
-                name: 'es6_1',
-                component: es6_1
-            }, {
-                path: '/es6_2',
-                name: 'es6_2',
-                component: es6_2
-            }, {
-                path: '/es6_3',
-                name: 'es6_3',
-                component: es6_3
-            }, {
-                path: '/es6_4',
-                name: 'es6_4',
-                component: es6_4
-            }, ]
-        }, {
-            path: '/dayin',
-            name: 'dayin',
-            component: dayin
-        }, {
-            path: '/tupianyulan',
-            name: 'tupianyulan',
-            component: tupianyulan
-        }, {
-            path: '/axios',
-            name: 'axios',
-            component: axios
-        }, {
-            path: '/fuwenben',
-            name: 'fuwenben',
-            component: fuwenben
-        }, {
-            path: '/mock',
-            name: 'mock',
-            component: mock
-        }, {
-            path: '/youcaidayin',
-            name: 'youcaidayin',
-            component: youcaidayin
-        }, {
-            path: '/bendixiazai',
-            name: 'bendixiazai',
-            component: bendixiazai
-        }, {
-            path: '/xlsx-to-json',
-            name: 'xlsxToJson',
-            component: xlsxToJson
-        }, {
-            path: '/tuozhuai',
-            name: 'tuozhuai',
-            component: tuozhuai
-        }, {
-            path: '/time',
-            name: 'time',
-            component: time
-        }, ]
-    }]
+        }
+    ]
 })

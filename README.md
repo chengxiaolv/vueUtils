@@ -47,6 +47,7 @@ npm test
     youcaidayin.vue  彩色打印。
     bendixiazai.vue  下载本地文件
     tuozhuai.vue  拖拽功能
+    login.vue     做的漂亮登陆页
 
  # axios 文件夹下面封装了axios。和封装的axios的简单使用。
 ```
