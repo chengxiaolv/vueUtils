@@ -19,6 +19,16 @@ import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
 Vue.use(Viewer)
 
+//  图片懒加载
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload, {
+    preLoad: 1.3,
+    // error: 'dist/error.png',
+    // loading: 'dist/loading.gif',
+    attempt: 1,
+    listenEvents: ['scroll']
+})
+
 // 引入mockjs
 require('./mockjs/mock.js')
 

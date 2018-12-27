@@ -86,6 +86,10 @@
             name:"图片裁剪",
             show: false,
 						router: '/tupiancaijian'
+          },{
+            name:"图片懒加载",
+            show: false,
+						router: '/lanjiazai'
           },
         ]
       }
