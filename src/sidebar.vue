@@ -90,6 +90,10 @@
             name:"图片懒加载",
             show: false,
 						router: '/lanjiazai'
+          },{
+            name:"年月选择器封装",
+            show: false,
+						router: '/nianyuexuezheqi'
           },
         ]
       }

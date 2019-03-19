@@ -17,6 +17,7 @@ import time from '@/SelectionDate/time.vue' //  有意思的时间器
 import jianbiantexiao from '@/components/jianbiantexiao.vue' //  渐变特效
 import tupiancaijian from '@/components/tupiancaijian.vue' //  图片裁剪
 import lanjiazai from '@/components/lanjiazai.vue' //  图片裁剪
+import nianyuexuezheqi from '@/components/nianyuexuezheqi.vue' //  年月选择器
 /**
  * 测试vuex的使用
  */
@@ -154,6 +155,10 @@ export default new Router({
                 path: '/lanjiazai',
                 name: 'lanjiazai',
                 component: lanjiazai
+            }, {
+                path: '/nianyuexuezheqi',
+                name: 'nianyuexuezheqi',
+                component: nianyuexuezheqi
             }, ]
         }
     ]

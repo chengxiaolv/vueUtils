@@ -18,18 +18,39 @@
 
     <el-button v-ripple="'yellow'">默认按钮</el-button>
 
+    <nianyuexuezheqi @lowerYear='lowerYear' @upperYear ='upperYear'  @ChoiceYue='ChoiceYue' :list='list'></nianyuexuezheqi>
+
   </div>
 </template>
 
 <script>
+  import nianyuexuezheqi from './nianyuexuezheqi.vue';
   export default {
     data () {
         return{
-
+          list: []
         }
     },
     methods: {
-
+      lowerYear(val){
+        console.log(val);
+        this.list = [{
+          c : 'a'
+        }]
+      },
+      upperYear(val){
+        console.log(val);
+        this.list = [{
+          b : 'a'
+        }]
+      },
+      ChoiceYue(year,month){
+        console.log(year);
+        console.log(month);
+      },
+    },
+    components:{
+      nianyuexuezheqi
     }
   }
 </script>
