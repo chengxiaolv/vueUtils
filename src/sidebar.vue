@@ -15,85 +15,89 @@
           {
             name:"html截屏图片",
             show: true,
-						router: '/main'
+			router: '/main'
           },
            {
             name:"百度地图",
             show: false,
-						router: '/baiduditu'
+			router: '/baiduditu'
           },
           {
             name:"vuex",
             show: false,
-						router: '/vuex'
+			router: '/vuex'
           },
           {
             name:"es6",
             show: false,
-						router: '/es6'
+			router: '/es6'
           },
           {
             name:"打印",
             show: false,
-						router: '/dayin'
+			router: '/dayin'
           },
           {
             name:"图片预览",
             show: false,
-						router: '/tupianyulan'
+			router: '/tupianyulan'
           },
           {
             name:"封装axios",
             show: false,
-						router: '/axios'
+			router: '/axios'
           },
           {
             name:"富文本编辑器",
             show: false,
-						router: '/fuwenben'
+			router: '/fuwenben'
           },
           {
             name:"mockjs模拟请求",
             show: false,
-						router: '/mock'
+			router: '/mock'
           },
           {
             name:"有彩打印",
             show: false,
-						router: '/youcaidayin'
+			router: '/youcaidayin'
           },
           {
             name:"下载本地文件",
             show: false,
-						router: '/bendixiazai'
+			router: '/bendixiazai'
           }, {
             name:"将excel表格渲染",
             show: false,
-						router: '/xlsx-to-json'
+			router: '/xlsx-to-json'
           },{
             name:"拖拽功能",
             show: false,
-						router: '/tuozhuai'
+			router: '/tuozhuai'
           },{
             name:"日期选择器",
             show: false,
-						router: '/time'
+			router: '/time'
           },{
             name:"渐变特效",
             show: false,
-						router: '/jianbiantexiao'
+			router: '/jianbiantexiao'
           },{
             name:"图片裁剪",
             show: false,
-						router: '/tupiancaijian'
+			router: '/tupiancaijian'
           },{
             name:"图片懒加载",
             show: false,
-						router: '/lanjiazai'
+			router: '/lanjiazai'
           },{
             name:"年月选择器封装",
             show: false,
-						router: '/nianyuexuezheqi'
+			router: '/nianyuexuezheqi'
+          },{
+            name:"自定义事件",
+            show: false,
+			router: '/zidingyishijian'
           },
         ]
       }

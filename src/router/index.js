@@ -18,6 +18,7 @@ import jianbiantexiao from '@/components/jianbiantexiao.vue' //  渐变特效
 import tupiancaijian from '@/components/tupiancaijian.vue' //  图片裁剪
 import lanjiazai from '@/components/lanjiazai.vue' //  图片裁剪
 import nianyuexuezheqi from '@/components/nianyuexuezheqi.vue' //  年月选择器
+import zidingyishijian from '@/components/zidingyishijian.vue' //  年月选择器
 /**
  * 测试vuex的使用
  */
@@ -159,6 +160,10 @@ export default new Router({
                 path: '/nianyuexuezheqi',
                 name: 'nianyuexuezheqi',
                 component: nianyuexuezheqi
+            }, {
+                path: '/zidingyishijian',
+                name: 'zidingyishijian',
+                component: zidingyishijian
             }, ]
         }
     ]

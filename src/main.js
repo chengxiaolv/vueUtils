@@ -49,6 +49,34 @@ Vue.use(Vuex)
 
 Vue.config.productionTip = false
 
+
+Vue.directive('has', {　
+    bind: function(el, binding) {
+        console.log(el);
+        console.log(binding);
+        let className = binding.value; //这个地方要注意了，看下面页面上的代码，对应取得相应的值
+        if (!Vue.prototype.$_has(className)) {
+            el.style.display = 'none';
+        }
+    }
+});
+
+//权限检查方法
+Vue.prototype.$_has = function(value) {
+    console.log(value);
+    let isExist = false;
+    let buttonperms = ['has', 'has1', 'has3', 'has', 'has', 'has', 'has']
+        // 权限列表
+    for (let i = 0; i < buttonperms.length; i++) {
+        if (buttonperms[i].indexOf(value) > -1) {
+            isExist = true;
+            break;
+        }
+    }
+    return isExist;
+};
+
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
